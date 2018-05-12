@@ -1,0 +1,6 @@
+library(knitr)
+spin("Notebook and par.R", format = "Rhtml")
+list.files()
+# knit(spin("Notebook and par.R"), output = "Notebook and par.html")
+# spin("Notebook and par.R")
+knit(spin("Notebook and par.R"), output = "Notebook and par.html")

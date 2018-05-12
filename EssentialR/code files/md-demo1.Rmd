@@ -1,0 +1,39 @@
+---
+title: "md-demo1"
+author: "Eric Nord"
+date: "3/26/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Analysis of my data
+
+#### about the data
+
+
+#### goal
+
+
+```{r}
+eb <- read.delim("~/Documents/Stats/EssentialR/Data/electric bill.txt")
+
+summary(eb)
+```
+
+This data looks OK.
+
+```{r make-plot,echo=FALSE}
+plot(kwh~avgT,data=eb)
+```
+
+
+Regression model of usage as a function of temp....
+
+```{r}
+summary(lm(kwh ~ avgT, data = eb))$coeff
+```
+
+The fit is OK - the R^2^ is 0.2698
+
